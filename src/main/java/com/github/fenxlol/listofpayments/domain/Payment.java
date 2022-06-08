@@ -1,5 +1,6 @@
 package com.github.fenxlol.listofpayments.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,6 +22,7 @@ public class Payment {
     private Date paymentDate;
 
     @Transient
+    @JsonBackReference
     Credit credit;
 
 }

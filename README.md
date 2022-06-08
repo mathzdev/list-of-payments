@@ -158,3 +158,7 @@
     }
 ]
 ```
+
+## Coverage
+
+![Coverage](https://raw.githubusercontent.com/fenxlol/list-of-payments/main/coverage.png)

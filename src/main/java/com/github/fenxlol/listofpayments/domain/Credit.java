@@ -25,7 +25,8 @@ public class Credit {
 
     @OneToMany(
             cascade = CascadeType.ALL,
-            orphanRemoval = true
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
     )
     private List<Payment> payments = new ArrayList<>();
 

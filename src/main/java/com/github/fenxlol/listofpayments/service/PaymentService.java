@@ -23,11 +23,7 @@ public class PaymentService {
         List<Payment> payments = new ArrayList();
 
         for (Payment payment : paymentRepository.findAll()) {
-            List<Payment> paymentsToFind = new ArrayList();
-            paymentsToFind.add(payment);
-
-            Credit credit = creditRepository.findFirstByPaymentsIn(paymentsToFind);
-            credit.setPayments(null);
+            Credit credit = creditRepository.findFirstByPaymentsIn(List.of(payment));
 
             payment.setCredit(credit);
             payments.add(payment);
